@@ -4,10 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Expense Tracker</title>
 </head>
-<body>
-    <h1>ExpenseTracker</h1>
+<body class="body">
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <span class="hero__eyebrow">ВАШ СПОКОЙНЫЙ ФИНАНСОВЫЙ РИТМ</span>
+                <h1>Меньше тревоги. Больше ясности.</h1>
+                <p>Записывайте траты, замечайте привычки 
+                    и оставляйте место для важного.
+                </p>
+            </div>
+
+            <div class="hero__date">
+                <span>18 июня 2026</span>
+                <span>Четверг всё в своём темпе</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Записать трату</h2>
+            <form>
+                <div>
+                    <label for="">Сумма</label>
+                    <input type="text">
+                    <span>₽</span>
+                </div>
+
+                <div>
+                    <label>На что потратили?</label>
+                    <input type="text">
+                </div>
+
+                <div>
+                    <label for="">Категория</label>
+                    <select>
+                       <option value="">Выберите категорию</option>
+                        <option>Еда</option>
+                        <option>Транспорт</option>
+                        <option>Покупки</option>
+                        <option>Дом</option>
+                        <option>Здоровье</option>
+                        <option>Развлечения</option>
+                        <option>Спорт</option>
+                        <option>Образование</option>
+                        <option>Подписки</option>
+                        <option>Другое</option>
+                    </select>
+                </div>
+
+                <button>Добавить трату</button>
+            </form>
+            <p>Любая трата имеет значение. Начните с одной.</p>
+        </section>
+
+        <section>
+            <h2>Ваши расходы</h2>
+            <div>
+                <article>
+                    <h3>Сегодня <span>18 июня</span></h3>
+                    <p>2 340 <span>₽</span></p>
+                </article>
+
+                <article>
+                    <h3>За неделю <span>2 – 8 ноября</span></h3>
+                    <p>12 680 <span>₽</span></p>
+                </article>
+
+                <article>
+                    <h3>За месяц <span>1 – 30 ноября</span></h3>
+                    <p>38 450 <span>₽</span></p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Последние операции</h2>
+            <div>
+                <label for=""></label>
+                <select name="" id="">
+                    <option value="">Все категории</option>
+                       <option>Еда</option>
+                       <option>Транспорт</option>
+                       <option>Покупки</option>
+                       <option>Дом</option>
+                       <option>Здоровье</option>
+                       <option>Развлечения</option>
+                       <option>Спорт</option>
+                       <option>Образование</option>
+                       <option>Подписки</option>
+                       <option>Другое</option>
+                </select>
+            </div>
+
+            <ul id="expenses-list">
+                <li>
+                    <article>
+                        <h3>Продукты</h3>
+                        <p>Еда</p>
+                        <time datetime="2026-11-03">03.11.2026</time>
+                        <p>1 250 ₽</p>
+                        <button type="button">Удалить</button>
+                        </article>
+                </li>
+            </ul>
+        </section>
+    </main>
     <script src="index.js"></script>
 </body>
 </html>
