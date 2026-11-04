@@ -392,3 +392,115 @@ a {
     background-color: #fff2f2;
 }
 
+@media (max-width: 900px) {
+    .add-expense__form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form__submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        width: calc(100% - 32px);
+        padding-top: 28px;
+    }
+
+    .expense-tracker__section {
+        margin-bottom: 24px;
+    }
+
+    .hero {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .hero__title {
+        font-size: 32px;
+    }
+
+    .hero__date {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .add-expense {
+        padding: 16px;
+    }
+
+    .add-expense__form {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form__submit {
+        margin-top: 4px;
+    }
+
+    .stats__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .stat-card,
+    .stat-card:first-child,
+    .stat-card:last-child {
+        padding: 0 0 12px;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 193, 193);
+    }
+
+    .stat-card:last-child {
+        border-bottom: none;
+    }
+
+    .stat-card__value {
+        font-size: 27px;
+    }
+
+    .history__header {
+        align-items: flex-start;
+    }
+
+    .history__title {
+        font-size: 14px;
+    }
+
+    .history__filter {
+        width: 135px;
+        flex-shrink: 0;
+    }
+
+    .transaction {
+        gap: 10px;
+    }
+
+    .transaction__details {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero__title {
+        font-size: 28px;
+    }
+
+    .history__header {
+        flex-direction: column;
+    }
+
+    .history__filter {
+        width: 100%;
+    }
+
+    .transaction__amount {
+        font-size: 11px;
+    }
+
+    .button--danger {
+        padding: 5px 7px;
+    }
+}
