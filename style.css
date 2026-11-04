@@ -1,10 +1,12 @@
 :root {
     --color-bg: #fcfcfc;
-    --color-surface: #ffffff;
     --color-text: #111111;
     --color-text-secondary: #85818d;
 
     --font-family: "Inter", sans-serif;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
 
     --container-width: 1200px;
     --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.025);
@@ -116,6 +118,129 @@ a {
 }
 
 .hero__date-mood {
+    color: var(--color-text-secondary);
+    font-size: 10px;
+}
+
+.add-expense {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border: 1px solid rgb(194, 193, 193);
+    border-radius: var(--radius-md);
+}
+
+.add-expense__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.add-expense__form {
+    display: grid;
+    grid-template-columns: 1fr 1.9fr 1.2fr auto;
+    align-items: end;
+    gap: 16px;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form__input-wrapper {
+    position: relative;
+}
+
+.form__input,
+.form__select {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    border: 1px solid rgb(194, 193, 193);
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form__input::placeholder {
+    color: #aaa5b0;
+    font-size: 12px;
+}
+
+.form__input:focus,
+.form__select:focus {
+    border-color: rgb(172, 171, 171);
+    box-shadow: 0 0 0 3px rgba(165, 138, 197, 0.12);
+}
+
+.form__input--number {
+    padding-right: 32px;
+    font-size: 17px;
+}
+
+.form__currency {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.form__select {
+    color: #aaa5b0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.form__select:valid {
+    color: var(--color-text);
+}
+
+.form__option {
+    color: var(--color-text);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button--primary {
+    min-height: 44px;
+    padding: 0 20px;
+    color: #ffffff;
+    background-color: #080808;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.button--primary::before {
+    content: "+";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.button--primary:hover {
+    background-color: #333333;
+}
+
+.button--primary:active {
+    transform: scale(0.98);
+}
+
+.add-expense__hint {
+    margin-top: 12px;
     color: var(--color-text-secondary);
     font-size: 10px;
 }
