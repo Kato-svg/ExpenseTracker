@@ -244,3 +244,151 @@ a {
     color: var(--color-text-secondary);
     font-size: 10px;
 }
+
+.stats {
+    margin-bottom: 28px;
+}
+
+.stats__title {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.stat-card {
+    min-width: 0;
+    padding: 0 22px;
+    border-right: 1px solid rgb(194, 193, 193);
+}
+
+.stat-card:first-child {
+    padding-left: 0;
+}
+
+.stat-card:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+.stat-card__title {
+    margin-bottom: 4px;
+    color: var(--color-text-secondary);
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.stat-card__date {
+    margin-left: 5px;
+}
+
+.stat-card__value {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+}
+
+.stat-card__currency {
+    font-size: 25px;
+}
+
+.history {
+    margin-top: 32px;
+}
+
+.history__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.history__title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.history__filter {
+    width: 150px;
+}
+
+.form__select--filter {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 11px;
+}
+
+.history__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.history__item {
+    border-bottom: 1px solid rgb(194, 193, 193);
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 68px;
+    padding: 12px 0;
+}
+
+.transaction__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.transaction__title {
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.transaction__category {
+    color: var(--color-text-secondary);
+    font-size: 10px;
+}
+
+.transaction__date {
+    margin-top: 3px;
+    color: var(--color-text-secondary);
+    font-size: 10px;
+}
+
+.transaction__details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.transaction__amount {
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.button--danger {
+    padding: 5px 10px;
+    color: rgb(165, 82, 82);
+    background-color: transparent;
+    border: 1px solid #f1dada;
+    border-radius: 6px;
+    font-size: 10px;
+}
+
+.button--danger:hover {
+    background-color: #fff2f2;
+}
+
