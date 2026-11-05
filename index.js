@@ -34,6 +34,7 @@ function removeExpense(id) {
         console.warn('Не удалось найти элемент с таким ID!')
     } else {
         expenses.splice(idIndex, 1)
+        renderExpenses()
     }
 } 
 
@@ -103,6 +104,11 @@ function createExpenseElement(expense) {
     infButton.classList.add('transaction__delete', 'button', 'button--danger')
     infButton.textContent = 'Удалить'
     infButton.type = 'button'
+    infButton.dataset.id = expense.id
+    infButton.addEventListener('click', (e) => {
+        removeExpense(e.currentTarget.dataset.id)
+    })
+
 
     divInfo.append(infTitle, infCategory, infDate)
     divDetails.append(infSum, infButton)
@@ -118,7 +124,6 @@ function renderExpenses() {
 
     expenses.forEach(expense => {
         const expenseElement = createExpenseElement(expense);
-
         listExpenses.append(expenseElement);
     });
 }
