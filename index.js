@@ -43,6 +43,7 @@ const sumField = document.querySelector('.form__input--number')
 const nameField = document.querySelector('.form__input--name')
 const categoryField = document.querySelector('#category')
 const listExpenses = document.querySelector('#expenses-list')
+const filterCategory = document.querySelector('#category-filter')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -119,11 +120,30 @@ function createExpenseElement(expense) {
     return li;
 }
 
-function renderExpenses() {
-    listExpenses.innerHTML = "";
+function getFilteredExpenses() {
+    const selectedCategory = filterCategory.value;
 
-    expenses.forEach(expense => {
+    if (selectedCategory === '') {
+        return expenses;
+    }
+
+    return expenses.filter(expense => {
+        return expense.category === selectedCategory;
+    });
+}
+
+function renderExpenses() {
+    listExpenses.innerHTML = '';
+
+    const expensesToRender = getFilteredExpenses();
+
+    expensesToRender.forEach(expense => {
         const expenseElement = createExpenseElement(expense);
         listExpenses.append(expenseElement);
     });
 }
+
+filterCategory.addEventListener('change', () => {
+    renderExpenses();
+});
+
