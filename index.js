@@ -44,6 +44,9 @@ const nameField = document.querySelector('.form__input--name')
 const categoryField = document.querySelector('#category')
 const listExpenses = document.querySelector('#expenses-list')
 const filterCategory = document.querySelector('#category-filter')
+const todayTotal = document.querySelector('#today-total')
+const weekTotal = document.querySelector('#week-total')
+const monthTotal = document.querySelector('#month-total')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -141,9 +144,16 @@ function renderExpenses() {
         const expenseElement = createExpenseElement(expense);
         listExpenses.append(expenseElement);
     });
+    console.log(calculateTotal(expenses))
 }
 
 filterCategory.addEventListener('change', () => {
     renderExpenses();
 });
 
+function calculateTotal(arr) {
+    const total = arr.reduce((totalAmount, expensAmount) => totalAmount + expensAmount.amount, 0) 
+    return total
+}
+
+console.log(calculateTotal(expenses))
